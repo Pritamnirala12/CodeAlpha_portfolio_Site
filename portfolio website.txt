@@ -1,0 +1,35 @@
+📌Project Title: Personal Portfolio Website
+
+📌Description:
+This project involves creating a personal portfolio website using HTML, CSS, and JavaScript. The website showcases your skills, projects, and contact information. It also integrates Web3Forms for a functional contact form, allowing visitors to send you messages directly.
+
+📌Project Overview
+🔹 Home Section → Introduction & brief about yourself.
+🔹 About Section → Skills, education, and experience.
+🔹 Projects Section → Showcase your best work.
+🔹 Web3 Integration → Connect MetaMask & interact with Ethereum blockchain.
+🔹 Contact Form → Users can send messages.
+🔹 Responsive Design → Works on mobile, tablet, and desktop.
+
+📌 Technologies Used
+🟢 HTML → Structure of the page.
+🔵 CSS → Styling and layout.
+🟠 JavaScript → Dynamic interactions.
+🟣 Web3.js → MetaMask wallet connection.
+
+ 📌Features
+✅ Home Section → Introduction & profile.
+✅ About Section → Skills, experience, education.
+✅ Projects Section → Showcase your best work.
+✅ Web3 Integration → Connect to MetaMask.
+✅ Contact Form → Users can send messages.
+✅ Responsive Design → Works on all devices.
+
+📌Project Structure
+
+✅portfolio/
+│── index.html          # Main HTML file
+│── style.css           # Styling for the website
+│── script.js           # JavaScript for interactions
+│── images/             # Folder for profile picture & project images
+│── Web3form            # **Web3Forms** is a **backend service** for handling **contact forms** without a server.

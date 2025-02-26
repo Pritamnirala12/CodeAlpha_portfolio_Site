@@ -1,0 +1,483 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #555;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navigation */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+body.dark-mode nav {
+  background-color: #222;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+/* Sections */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* About Section */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between image and text */
+}
+
+.profile-photo {
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits well */
+  border: 3px solid #333; /* Optional: Adds a border */
+}
+
+/* Projects Section */
+.project-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-box {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .project-box {
+  background-color: #444;
+  color: #f4f4f4;
+}
+
+.project-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-details h3 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+}
+
+.project-details p {
+  margin: 0 0 15px;
+  font-size: 0.9em;
+}
+
+.view-project-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .view-project-btn {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.view-project-btn:hover {
+  background-color: #555;
+}
+
+/* Education Section */
+.education-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.education-box {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-mode .education-box {
+  background-color: #444;
+  color: #f4f4f4;
+}
+
+.education-box:hover {
+  transform: translateY(-10px);
+  background-color: #728396;
+  color: #fff;
+}
+
+.education-box i {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #0101f7;
+  transition: color 0.3s ease;
+}
+
+.education-box:hover i {
+  color: #fff;
+}
+
+/* Skills Section */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skills-box {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-mode .skills-box {
+  background-color: #444;
+  color: #f4f4f4;
+}
+
+.skills-box:hover {
+  transform: translateY(-10px);
+  background-color: #728294;
+  color: #fff;
+}
+
+.skills-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-box ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills-box ul li i {
+  font-size: 1.2em;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.skills-box:hover ul li i {
+  color: #fff;
+}
+/* General Section Styling */
+#contact {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode #contact {
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+body.dark-mode #contact h2 {
+  color: #f4f4f4;
+}
+
+/* Form Styling */
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: slideUp 1s ease-in-out;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode #contact form {
+  background-color: #333;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .form-group label {
+  color: #f4f4f4;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background-color: #444;
+  border-color: #555;
+  color: #f4f4f4;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+  outline: none;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 15px;
+}
+
+/* Button Styling */
+#contact button {
+  background-color: #6c63ff;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode #contact button {
+  background-color: #574fdb;
+}
+
+#contact button:hover {
+  background-color: #574fdb;
+  transform: translateY(-3px);
+}
+
+#contact button:active {
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  #contact form {
+    padding: 20px;
+  }
+}
+/* Contact Section */
+#contact-details {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode #contact-details {
+  background-color: #333;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.contact-info {
+  margin-top: 10px;
+}
+
+.contact-item {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #000000;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+body.dark-mode .contact-item {
+  color: #f4f4f4;
+}
+
+.contact-item:hover {
+  transform: scale(1.05);
+  background-color: #e0f7fa;
+}
+
+body.dark-mode .contact-item:hover {
+  background-color: #225ece;
+  color: #f4f4f4;
+}
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+body.dark-mode footer {
+  background-color: #222;
+}
+
+.social-media a {
+  color: #0b37ff;
+  margin: 0 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #e71616;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-box, .education-box, .skills-box {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  text-align: center;
+  }
+}

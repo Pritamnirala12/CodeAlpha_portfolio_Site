@@ -1,0 +1,88 @@
+📌Project Title: Static Website Hosting on AWS EC2
+
+📌Description:This project involves hosting a static website (like a portfolio, blog, or business page) on an AWS EC2 instance. It demonstrates your ability to set up and manage cloud infrastructure, deploy web content, and ensure the website is accessible to users.
+
+
+📌Step 1: Set Up an AWS Account
+✅Sign Up: If you don’t have an AWS account, go to [AWS](https://aws.amazon.com/) and sign up.
+✅ Free Tier: If you are eligible, you can use the AWS Free Tier to host your static website at no cost for the first year.
+
+📌 Step 2: Launch an EC2 Instance
+✅Go to EC2 Dashboard: Log in to your AWS Management Console and navigate to the EC2 Dashboard.
+✅Launch Instance:
+   - Click on "Launch Instance."
+   - Choose an Amazon Machine Image (AMI). For a simple static website, you can use the Amazon Linux 2 AMI or Ubuntu Server.
+   - Choose an instance type. The `t2.micro` instance is eligible for the Free Tier.
+   - Click "Next: Configure Instance Details."
+✅Configure Instance: You can leave the default settings for a basic setup.
+✅Add Storage: The default storage is usually sufficient for a static website.
+✅Configure Security Group:
+   - Create a new security group or select an existing one.
+   - Add a rule to allow HTTP (port 80) and HTTPS (port 443) traffic. You can also allow SSH (port 22) for remote access.
+✅Review and Launch: Review your settings and click "Launch." You will be prompted to create or select a key pair for SSH access. Download the key pair and keep it safe.
+
+📌Step 3: Connect to Your EC2 Instance
+✅SSH into Your Instance:
+   - Open a terminal (or Command Prompt on Windows).
+   - Use the following command to connect (replace `your-key.pem` and `your-instance-public-dns` with your key file and instance DNS):
+     ```bash
+     ssh -i "your-key.pem" ec2-user@your-instance-public-dns
+     ```
+
+📌Step 4: Install a Web Server
+✅Update the Package Manager:
+   ```bash
+   sudo yum update -y  # For Amazon Linux
+   sudo apt update -y  # For Ubuntu
+   ```
+✅Install Nginx:
+   ```bash
+   sudo yum install nginx -y  # For Amazon Linux
+   sudo apt install nginx -y   # For Ubuntu
+   ```
+✅Start Nginx:
+   ```bash
+   sudo systemctl start nginx
+   sudo systemctl enable nginx
+   ```
+
+📌Step 5: Upload Your Static Website Files
+✅Upload Files: You can use `scp` (secure copy) to upload your static files to the EC2 instance. For example:
+   ```bash
+   scp -i "your-key.pem" -r /path/to/your/website/* ec2-user@your-instance-public-dns:/var/www/html/
+   ```
+   Alternatively, you can use SFTP clients like FileZilla or WinSCP.
+
+📌Step 6: Configure Nginx
+✅Edit Nginx Configuration:
+   - Open the Nginx configuration file:
+     ```bash
+     sudo nano /etc/nginx/nginx.conf
+     ```
+   - Ensure the server block is set to serve files from `/var/www/html`. You can modify the `server` block as needed.
+✅Test Nginx Configuration:
+   ```bash
+   sudo nginx -t
+   ```
+✅Restart Nginx:
+   ```bash
+   sudo systemctl restart nginx
+   ```
+📌Step 7: Access Your Website
+✅Open a Web Browser: Enter the public DNS or IP address of your EC2 instance in the browser. You should see your static website.
+
+📌Step 8: (Optional) Set Up a Domain Name
+✅Register a Domain: You can register a domain through AWS Route 53 or any other domain registrar.
+✅Point Domain to EC2: Update the DNS settings to point your domain to the public IP address of your EC2 instance.
+
+📌Step 9: (Optional) Enable HTTPS
+✅Install Certbot: You can use Certbot to obtain a free SSL certificate from Let’s Encrypt.
+✅Follow the instructions to set up HTTPS for your Nginx server.
+
+📌Additional Considerations
+✅Cost Management: Monitor your usage to avoid unexpected charges.
+✅Backup: Regularly back up your website files.
+✅Scaling: If your website grows, consider using AWS S3 for static hosting or AWS CloudFront for CDN.
+
+📌Conclusion
+✅You now have a static website hosted on AWS EC2! This setup is suitable for personal projects, portfolios, or small business websites. If you have any specific questions or need
